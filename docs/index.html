@@ -1,0 +1,262 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Git Github Gitflow</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<style>
+			#me a {
+				display:flex;
+				align-items: center;
+				text-decoration: none;
+				color: white;
+			}
+
+			i, svg {
+				margin-right: 20px;
+			}
+
+			svg {
+				margin-left: -5px;
+			}
+
+			h3 {
+				text-transform: initial !important;
+			}
+
+			.gorgeous-pic {
+				width: 300px;
+				height: 300px;
+				border-radius: 500px;
+				object-fit: cover;
+			}
+
+			.image {
+				width: 400px;
+				background: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-transition="none">
+				<img class="gorgeous-pic" src="./img/me.jpg"/>
+				<div id="me" style="text-align:left;margin-left: 30%">
+					<a>WomenWhoCode Evangelist</a>
+					<a><svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						<g id="Style-Guide" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Web-UI-Elements" transform="translate(-119.000000, -152.000000)">
+										<g id="Nav-Icons" transform="translate(80.000000, 111.000000)">
+												<g id="nav_discover_default" transform="translate(39.000000, 41.000000)">
+														<rect id="Rectangle" x="0" y="0" width="64" height="64"></rect>
+														<path d="M31.2150701,25.7904664 L26.8864994,34.4950156 C25.1961834,37.8953335 22.8826369,39.6179848 19.7573198,39.6179848 C15.5747369,39.6179848 12.184285,36.1634206 12.184285,31.9368387 C12.184285,27.7102568 15.5747369,24.2556926 19.7573198,24.2556926 C22.8826369,24.2556926 25.1961834,25.9776824 26.8864994,29.3786618 L27.1909134,29.9899252 L30.8386442,22.6541032 C28.0701134,19.0764924 24.3254939,17.3333333 19.7573198,17.3333333 C11.7914928,17.3333333 5.33333333,23.886553 5.33333333,31.9368387 C5.33333333,39.9864629 11.7914928,46.5396825 19.7573198,46.5396825 C25.5045253,46.5396825 29.950279,43.783705 32.7855845,38.0825495 L37.1135006,29.3786618 C38.8038166,25.9776824 41.1173631,24.2556926 44.2426802,24.2556926 C48.4252631,24.2556926 51.815715,27.7102568 51.815715,31.9368387 C51.815715,36.1634206 48.4252631,39.6179848 44.2426802,39.6179848 C41.1173631,39.6179848 38.8038166,37.8953335 37.1135006,34.4950156 L36.8123599,33.8903676 L33.1652837,41.2248666 C35.9331599,44.7985081 39.6771248,46.5396825 44.2426802,46.5396825 C52.2085072,46.5396825 58.6666667,39.9864629 58.6666667,31.9368387 C58.6666667,23.886553 52.2085072,17.3333333 44.2426802,17.3333333 C38.4954747,17.3333333 34.049721,20.0893108 31.2150701,25.7904664 Z" id="Fill-1" fill="white"></path>
+												</g>
+										</g>
+								</g>
+						</g>
+					</svg>
+					Software Engineer</a>
+					<a href="https://twitter.com/linxea_"><i class="fab fa-twitter"></i>@linxea_</a>
+					<a href="https://www.youtube.com/channel/UCA6sSSOlSJiQY2o10QF5KQw"><i class="fab fa-youtube"></i>codingclub</a>
+					<a href="https://dev.to/linxea"><i class="fab fa-dev"></i>@linxea</a>
+				</div>
+				</section>
+				<section data-transition="none">
+				<section>
+					<h1>What is Git?</h1>
+					<img style="width:200px" src="./img/git.png"/>
+				</section>
+
+				<section>
+					<img src="./img/linus.jpeg"/>
+					<h3>Created by Linus Torvalds in 2005</h3>
+				</section>
+
+				<section>
+					<h3>Distributed Version Control System</h3>
+					<img style="border:none;width:600px;height:400px;object-fit:cover;background:none;box-shadow:none;" src="./img/distributed.png">
+				</section>
+
+				<section>
+					<img style="max-width:600px;" src="./img/cheatsheet.jpg"/>
+				</section>
+				</section>
+
+				<section data-transition="none">
+					<section data-transition="none">
+					<h1>Git ≠ Github</h1>
+					<div>
+						<img class="gorgeous-pic" src="./img/octocat-walk.gif">
+					</div>
+						<ul>
+							<li>Git is a tool</li>
+							<li>Github is a hosting service</li>
+						</ul>
+
+					</section>
+
+					<section data-transition="none">
+					 <h3>Github is acquired by Microsoft</h3>
+					</section>
+
+					<section data-transition="none">
+					 <div class="tweet" data-src="https://twitter.com/ShanewasNiloy/status/1003640405705887744?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1003640405705887744&ref_url=http%3A%2F%2Ftime.com%2F5300247%2Fmicrosoft-github-reactions%2F"></div>
+					</section>
+				</section>
+				<section data-transition="none">
+					<section>
+						<h1>Gitflow</h1>
+						<p>A Popular Branching Strategy</p>
+					</section>
+
+					<section>
+						<h2>Simple Workflow</h2>
+						<ul>
+							<li class="fragment">Master branch</li>
+							<li class="fragment">Develop branch</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Cons</h2>
+						<ul>
+							<li>Uncompleted features may be released</li>
+							<li>Introduce bugs easily</li>
+							<li>Many conflicts</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Gitflow Workflow</h2>
+						<ul>
+							<li class="fragment">Master branch</li>
+							<li class="fragment">Develop branch</li>
+							<li class="fragment">Feature branch</li>
+							<li class="fragment">Release branch</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Benefits</h2>
+						<ul>
+							<li>Easy to work in parallel</li>
+							<li>Release staging area</li>
+						</ul>
+					</section>
+					<section data-transition="none">
+						<img style="max-height:600px;"src="./img/gitflow1.png"/>
+					</section>
+					<section data-transition="none">
+						<img style="max-height:600px;"src="./img/gitflow2.png"/>
+					</section>
+					<section data-transition="none">
+						<img style="max-height:600px;"src="./img/gitflow3.png"/>
+					</section>
+					<section data-transition="none">
+						<img style="max-height:600px;"src="./img/gitflow4.png"/>
+					</section>
+					<section data-transition="none">
+						<img style="max-height:600px;"src="./img/gitflow5.png"/>
+					</section>
+				</section>
+				<section data-transition="none">
+					<section>
+						<h1>HubFlow</h1>
+						<p> The GitFlow Tools Adapted For GitHub</p>
+					</section>
+				<section data-markdown>
+					<script type="text/template">
+						<h3>Normal git commands</h3>
+
+						```
+							git checkout develop
+							git hf pull origin develop
+							git checkout -b release/production-1.0.0
+							git add .
+							git commit -m "Add new release"
+							git push origin release/production-1.0.0
+							git checkout master
+							git pull origin master
+							git merge release/production-1.0.0
+							git tag production-1.0.0
+							git push --tags origin production-1.0.0
+							git checkout develop
+							git pull origin develop
+							git merge master
+							git push --delete release/production-1.0.0
+						```
+					</script>
+				</section>
+				<section data-markdown>
+					<script type="text/template">
+						<h3>Amazing git hubflow commands</h3>
+
+						```
+							git hf release start production-1.0.0
+							git add .
+							git commit -m "Add new release"
+							git hf release finish production-1.0.0
+						```
+					</script>
+				</section>
+				</section>
+				<section>
+					<h1>Demo</h1>
+				</section>
+				<section data-transition="Zoom">
+					<h1>KTHXBYE</h1>
+				</section>
+				<section>
+					<h2>References</h2>
+					<ul>
+						<li>https://datasift.github.io/gitflow/IntroducingGitFlow.html</li>
+						<li>http://cameronmcefee.com/work/the-octocat/</li>
+						<li>https://rubygarage.org/blog/most-basic-git-commands-with-examples</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+{% comment %} TODO
+http://cameronmcefee.com/work/the-octocat/
+ {% endcomment %}
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/embed-tweet/embed-tweet.js' },
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
